@@ -1,9 +1,13 @@
-import { Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import { OpenAiService } from './open-ai/open-ai.service';
 
 interface ChatInput {
-  question: string;
+  prompt: string;
+}
+
+class ChatOuput {
+  completion: string;
 }
 
 @Controller()
@@ -23,10 +27,15 @@ export class AppController {
     return 'OK';
   }
 
-  @Post('/chat')
-  async postChat(param: ChatInput): Promise<string> {
+  @Post('/api/chat')
+  async postChat(@Body() chatInput: ChatInput): Promise<ChatOuput> {
     // Validation param here
-    const chatCompletion = await this.openAIservice.chat(param.question, '123');
-    return chatCompletion.choices[0].message.content || 'No response';
+    const chatCompletion = await this.openAIservice.chat(
+      chatInput.prompt,
+      '123',
+    );
+    return {
+      completion: chatCompletion.choices[0].message.content || 'No response',
+    };
   }
 }
