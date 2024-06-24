@@ -18,6 +18,9 @@ API:
 ```bash
 $ yarn install
 ```
+## Env file
+copy `.env.example` to `.env`
+ask @raphael for an OPEN_AI_KEY 
 
 ## Running the app
 
