@@ -16,10 +16,18 @@ This repository is divided into two parts:
 To install the backend and frontend applications, follow the instructions in the respective directories.
 
 You will need an OpenAI API key to run the backend application. 
-- You can get one [here](https://platform.openai.com/signup).
-- Or We can provide a temporary API key for testing purposes during the interview.
-
+- We will provide a temporary API key for testing purposes during the interview.
 - The API key should be stored in an environment variable called `OPENAI_API_KEY`. (or the .env file in the backend directory)
+
+  ```
+  cd backend/
+  npm install
+  npm run start
+
+  cd ../frontend
+  npm install
+  npm run start
+  ```
 
 ## 3. Running the Applications
 To run the backend and frontend applications, follow the instructions in the respective directories.
