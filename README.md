@@ -41,7 +41,7 @@ npm run start
 
 ## 4. Assignment
 
-> [!IMPORTANT]
+> [!CAUTION]
 > Please make sure you do the Task 1 before the interview.
 
 ### Task 1 - Before the interview
