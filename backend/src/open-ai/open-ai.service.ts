@@ -18,7 +18,7 @@ export class OpenAiService {
     const openaiClientID = this.configService.get<string>('OPEN_AI_CLIENT_ID');
     if (!openaiApiKey || !openaiModelVersion || !openaiClientID) {
       throw new Error(
-        'OPEN_AI_API_KEY or OPEN_AI_MODEL_VERSION is not defined',
+        'OPEN_AI_API_KEY or OPEN_AI_MODEL_VERSION or OPEN_AI_CLIENT_ID is not defined',
       );
     }
 

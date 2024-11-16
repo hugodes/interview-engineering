@@ -20,6 +20,7 @@ To install the backend and frontend applications, follow the instructions in the
 You will need an OpenAI API key to run the backend application. 
 - We will provide a temporary API key for testing purposes during the interview.
 - The API key should be stored in an environment variable called `OPENAI_API_KEY`. (or the .env file in the backend directory)
+- If your are not using the .env file, you should also set environment variables `OPEN_AI_MODEL_VERSION` to `GPT-4o` and `OPEN_AI_CLIENT_ID` to `test`
 
   ```
   cd backend/
