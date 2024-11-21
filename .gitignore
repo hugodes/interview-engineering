@@ -1,7 +1,5 @@
 .idea/
-/node_modules/
 node_modules/
-backend/.vscode/settings.json
 backend/.vscode/settings.json
 .vscode/
 /*.code-workspace
